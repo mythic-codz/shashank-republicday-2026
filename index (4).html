@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Through Time | A Digital Exhibit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="exhibit-header">
+        <div class="header-container">
+            <span class="exhibit-date">January 26, 2026</span>
+            <span class="exhibit-type">Special Exhibit</span>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-canvas">
+            <div class="flag-wrapper">
+                <svg class="premium-flag" viewBox="0 0 450 300" preserveAspectRatio="xMidYMid meet">
+                    <rect width="450" height="100" fill="#f58220" />
+                    <rect y="100" width="450" height="100" fill="#FFFFFF" />
+                    <rect y="200" width="450" height="100" fill="#0b6739" />
+                    <g transform="translate(225, 150)">
+                        <circle r="45" fill="none" stroke="#1a2a6c" stroke-width="2" />
+                        <circle r="4" fill="#1a2a6c" />
+                        <g id="spokes">
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(0)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(15)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(30)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(45)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(60)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(75)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(90)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(105)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(120)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(135)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(150)" />
+                            <line y1="-45" y2="45" stroke="#1a2a6c" stroke-width="0.8" transform="rotate(165)" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <h1 class="hero-title">BHARAT<br><span class="thin">THROUGH TIME</span></h1>
+            <p class="hero-subtext">A quiet reflection on the journey of a nation, from the seeds of freedom to the digital horizon.</p>
+            <div class="scroll-cue">
+                <div class="cue-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <main class="exhibit-content">
+        <section class="story-chapter">
+            <div class="chapter-content reveal">
+                <div class="year-marker">1947</div>
+                <div class="story-text">
+                    <h3>Independence</h3>
+                    <p>A nation awakens. It was more than a change of flags; it was the birth of a collective identity, forged in the fires of struggle and defined by the quiet hope of millions.</p>
+                </div>
+            </div>
+
+            <div class="chapter-content reveal alt">
+                <div class="year-marker">1950</div>
+                <div class="story-text">
+                    <h3>The Republic</h3>
+                    <p>We gave ourselves a promise. The adoption of the Constitution transformed a land into a Republic, enshrining the values of justice, liberty, and equality as our eternal guide.</p>
+                </div>
+            </div>
+
+            <div class="chapter-content reveal">
+                <div class="year-marker">2026</div>
+                <div class="story-text">
+                    <h3>The Future</h3>
+                    <p>Digital sovereignty meets ancient wisdom. Our journey continues through new frontiers of technology, led by a generation that remembers its roots while building the future.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reflections-section reveal">
+            <div class="reflection-block">
+                <span class="label">Perspective</span>
+                <h2>Republic Day & Me</h2>
+                <p class="reflection-text">Republic Day is a moment of quiet pride. It reminds me that being a citizen is a responsibility we renew daily—not through loud displays, but through the small, honest choices we make for our community and our nation.</p>
+            </div>
+
+            <div class="reflection-grid">
+                <div class="reflection-item">
+                    <span class="label">Equality</span>
+                    <p>The core of our social contract. It ensures that dignity is a universal right, bridging gaps and creating a level ground for every Indian to thrive.</p>
+                </div>
+                <div class="reflection-item">
+                    <span class="label">Responsibility</span>
+                    <p>In our digital age, the duty to maintain harmony is paramount. A responsible citizen preserves truth and fosters unity in every space they inhabit.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="museum-interact reveal">
+            <div class="interact-menu">
+                <div class="interact-item" onclick="openModal('values')">
+                    <span class="num">01</span>
+                    <h3>The Values</h3>
+                </div>
+                <div class="interact-item" onclick="openModal('rights')">
+                    <span class="num">02</span>
+                    <h3>The Rights</h3>
+                </div>
+                <div class="interact-item" onclick="openModal('duties')">
+                    <span class="num">03</span>
+                    <h3>The Duties</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="tribute-section reveal">
+            <div class="generator-minimal">
+                <div class="input-set">
+                    <input type="text" id="userName" placeholder="Name" maxlength="20">
+                    <select id="patrioticMessage">
+                        <option value="A tribute to our shared heritage.">Shared Heritage</option>
+                        <option value="The spirit of the Republic.">Republic Spirit</option>
+                        <option value="A journey of unity and pride.">Unity & Pride</option>
+                    </select>
+                    <button class="compose-btn" onclick="generateCard()">Compose</button>
+                </div>
+                
+                <div id="cardPreview" class="hidden preview-canvas">
+                    <div class="museum-card" id="printableCard">
+                        <div class="accent-line"></div>
+                        <h4 id="displayMessage"></h4>
+                        <div class="divider"></div>
+                        <p class="attribution">Presented for</p>
+                        <h2 id="displayName"></h2>
+                        <p class="signature">Shashank | 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="signature-section reveal">
+            <div class="signature-content">
+                <p class="signature-story">
+                    This project is a quiet exploration of our history. I wanted to move away from the noise and focus on the intentionality of our journey. It is a tribute to the values that define us, built with a sense of purpose and pride.
+                </p>
+                <div class="signature-details">
+                    <span class="name">Shashank</span>
+                    <span class="location">Muzaffarnagar</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="final-footer">
+        <p>Made by Shashank</p>
+    </footer>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-container">
+            <span class="close-exhibit" onclick="closeModal()">&times;</span>
+            <div id="modalBody" class="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

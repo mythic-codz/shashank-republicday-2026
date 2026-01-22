@@ -1,0 +1,402 @@
+:root {
+    --saffron: #f58220;
+    --white: #ffffff;
+    --green: #0b6739;
+    --navy: #1a2a6c;
+    --text: #1d1d1f;
+    --text-light: #86868b;
+    --bg: #ffffff;
+    --border: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Exhibit Header */
+.exhibit-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 30px 40px;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-light);
+}
+
+/* Hero */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.hero-canvas {
+    max-width: 900px;
+    width: 100%;
+}
+
+.flag-wrapper {
+    width: 140px;
+    margin: 0 auto 50px;
+}
+
+.premium-flag {
+    width: 100%;
+    animation: gentle-float 10s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    margin-bottom: 30px;
+    letter-spacing: -0.03em;
+}
+
+.hero-title .thin {
+    font-weight: 300;
+}
+
+.hero-subtext {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    max-width: 500px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.scroll-cue {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cue-line {
+    width: 1px;
+    height: 50px;
+    background: var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.cue-line::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 40%;
+    background: var(--text-light);
+    animation: slide-down 2.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@keyframes slide-down {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(300%); }
+}
+
+/* Content Layout */
+.exhibit-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
+
+.story-chapter {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    margin-bottom: 150px;
+}
+
+.chapter-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.chapter-content.alt {
+    direction: rtl;
+}
+
+.chapter-content.alt .story-text {
+    direction: ltr;
+}
+
+.year-marker {
+    font-size: clamp(4rem, 15vw, 12rem);
+    font-weight: 700;
+    color: #f8f8f8;
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.story-text h3 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: var(--navy);
+}
+
+.story-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* Reflections */
+.reflections-section {
+    padding: 100px 0;
+    border-top: 1px solid var(--border);
+}
+
+.label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--saffron);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.reflection-block h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+}
+
+.reflection-text {
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 80px;
+}
+
+.reflection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.reflection-item p {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* Menu */
+.museum-interact {
+    padding: 100px 0;
+}
+
+.interact-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.interact-item {
+    padding: 40px;
+    background: #fafafa;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.interact-item:hover {
+    background: #f4f4f4;
+}
+
+.interact-item .num {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+/* Tribute */
+.tribute-section {
+    padding: 100px 0;
+}
+
+.generator-minimal {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.input-set {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.input-set input, .input-set select {
+    padding: 12px;
+    border: 1px solid var(--border);
+    font-family: inherit;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.compose-btn {
+    padding: 12px 25px;
+    background: var(--text);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.museum-card {
+    background: var(--white);
+    padding: 60px;
+    border: 1px solid var(--border);
+    text-align: center;
+    position: relative;
+}
+
+.accent-line {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: linear-gradient(to right, var(--saffron), var(--white), var(--green));
+}
+
+.divider {
+    width: 30px; height: 1px;
+    background: var(--border);
+    margin: 30px auto;
+}
+
+.attribution { font-size: 0.75rem; text-transform: uppercase; color: var(--text-light); }
+.signature { margin-top: 40px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-light); }
+
+/* Signature Section */
+.signature-section {
+    padding: 150px 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.signature-story {
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.signature-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.signature-details .name {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.signature-details .location {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+}
+
+/* Footer */
+.final-footer {
+    padding: 60px 0;
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-light);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.99);
+}
+
+.modal-container {
+    max-width: 600px;
+    margin: 15vh auto;
+    padding: 40px;
+}
+
+.close-exhibit {
+    position: absolute;
+    top: 40px; right: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.hidden { display: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .exhibit-header { padding: 20px; }
+    .hero-section { padding: 0 20px; }
+    .chapter-content { grid-template-columns: 1fr; gap: 20px; }
+    .story-chapter { gap: 100px; }
+    .reflection-grid { grid-template-columns: 1fr; }
+    .interact-menu { grid-template-columns: 1fr; }
+    .input-set { grid-template-columns: 1fr; }
+    .museum-card { padding: 40px; }
+}
